@@ -41,6 +41,13 @@ public class AuthController {
   @Autowired
   JwtUtils jwtUtils;
 
+  /**
+   * This API authenticates the user request
+   * 
+   * @RequestBody loginRequest
+   * 
+   * @return {@link ResponseEntity<?>}
+   */
   @PostMapping("/signin")
   public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
 	  
@@ -48,6 +55,13 @@ public class AuthController {
       
   }
 
+  /**
+	 * This method is used to create new User
+	 * 
+	 * @param signupRequest
+	 * 
+	 * @return {@link ResponseEntity<?> }
+	 */
   @PostMapping("/signup")
   public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
 	  

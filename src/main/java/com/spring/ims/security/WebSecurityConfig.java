@@ -66,7 +66,7 @@ public class WebSecurityConfig{
   public void configure(WebSecurity web) throws Exception {
       web
           .ignoring()
-          .antMatchers("/h2-console/**");
+          .antMatchers("/h2-ui/**");
   }
   
   @Bean
